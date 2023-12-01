@@ -103,14 +103,14 @@ const definition = {
             [3, 'running_state', tuya.valueConverterBasic.lookup({'heat': tuya.enum(0), 'idle': tuya.enum(1)})],
             [4, 'current_heating_setpoint', tuya.valueConverter.divideBy10],
             [5, 'local_temperature', tuya.valueConverter.divideBy10],
-            [7, 'child_lock', tuya.valueConverter.lockUnlock],
-            [26, 'schedule_monday', fixedValueConverter.thermostatScheduleDayMultiDPWithDayNumber(1)],
-            [27, 'schedule_tuesday', fixedValueConverter.thermostatScheduleDayMultiDPWithDayNumber(2)],
-            [28, 'schedule_wednesday', fixedValueConverter.thermostatScheduleDayMultiDPWithDayNumber(3)],
-            [29, 'schedule_thursday', fixedValueConverter.thermostatScheduleDayMultiDPWithDayNumber(4)],
-            [30, 'schedule_friday', fixedValueConverter.thermostatScheduleDayMultiDPWithDayNumber(5)],
-            [31, 'schedule_saturday', fixedValueConverter.thermostatScheduleDayMultiDPWithDayNumber(6)],
-            [32, 'schedule_sunday', fixedValueConverter.thermostatScheduleDayMultiDPWithDayNumber(7)],
+            [7, 'child_lock', tuya.valueConverter.lockUnlock],           
+            [28, 'schedule_wednesday', fixedValueConverter.thermostatScheduleDayMultiDPWithDayNumber(1)],
+            [29, 'schedule_thursday', fixedValueConverter.thermostatScheduleDayMultiDPWithDayNumber(2)],
+            [30, 'schedule_friday', fixedValueConverter.thermostatScheduleDayMultiDPWithDayNumber(3)],
+            [31, 'schedule_saturday', fixedValueConverter.thermostatScheduleDayMultiDPWithDayNumber(4)],
+            [32, 'schedule_sunday', fixedValueConverter.thermostatScheduleDayMultiDPWithDayNumber(5)],
+            [33, 'schedule_monday', fixedValueConverter.thermostatScheduleDayMultiDPWithDayNumber(6)],
+            [34, 'schedule_tuesday', fixedValueConverter.thermostatScheduleDayMultiDPWithDayNumber(7)],  
             [35, null, tuya.valueConverter.errorOrBatteryLow],
             [36, 'frost_protection', tuya.valueConverter.onOff],
             [39, 'scale_protection', tuya.valueConverter.onOff],
@@ -121,5 +121,3 @@ const definition = {
 
 
 module.exports = definition;
-
-
