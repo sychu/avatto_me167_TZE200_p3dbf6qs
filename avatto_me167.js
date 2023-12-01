@@ -65,7 +65,7 @@ const definition = {
     fingerprint: tuya.fingerprint('TS0601', [
         '_TZE200_bvu2wnxz', /* model: 'ME167', vendor: 'AVATTO' */
         '_TZE200_6rdj8dzm', /* model: 'ME167', vendor: 'AVATTO' */
-        '_TZE200_p3dbf6qs', /* model: 'ME168', vendor: 'AVATTO' */
+        '_TZE200_p3dbf6qs', /* model: 'ME167', vendor: 'AVATTO' */
         '_TZE200_rxntag7i', /* model: 'ME168', vendor: 'AVATTO' */
     ]),
     model: 'TS0601_thermostat_3',
