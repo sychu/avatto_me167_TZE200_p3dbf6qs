@@ -22,7 +22,7 @@ const fixedValueConverter = {
             return schedule.join(' ');
         },
         to: (v) => {
-            const payload = [2];
+            const payload = [0];
             const transitions = v.split(' ');
             if (transitions.length != 6) {
                 throw new Error('Invalid schedule: there should be 6 transitions');
@@ -74,8 +74,8 @@ const definition = {
     fromZigbee: [tuya.fz.datapoints],
     toZigbee: [tuya.tz.datapoints],
     whiteLabel: [
-        tuya.whitelabel('AVATTO', 'ME167', 'Thermostatic radiator valve', ['_TZE200_bvu2wnxz', '_TZE200_6rdj8dzm']),
-        tuya.whitelabel('AVATTO', 'ME168', 'Thermostatic radiator valve', ['_TZE200_p3dbf6qs', '_TZE200_rxntag7i']),
+        tuya.whitelabel('AVATTO', 'ME167', 'Thermostatic radiator valve', ['_TZE200_bvu2wnxz', '_TZE200_6rdj8dzm', '_TZE200_p3dbf6qs']),
+        tuya.whitelabel('AVATTO', 'ME168', 'Thermostatic radiator valve', ['_TZE200_rxntag7i']),
     ],
     onEvent: tuya.onEventSetTime,
     configure: tuya.configureMagicPacket,
@@ -104,13 +104,13 @@ const definition = {
             [4, 'current_heating_setpoint', tuya.valueConverter.divideBy10],
             [5, 'local_temperature', tuya.valueConverter.divideBy10],
             [7, 'child_lock', tuya.valueConverter.lockUnlock],
-            [28, 'schedule_monday', fixedValueConverter.thermostatScheduleDayMultiDPWithDayNumber(7)],
-            [29, 'schedule_tuesday', fixedValueConverter.thermostatScheduleDayMultiDPWithDayNumber(6)],
-            [30, 'schedule_wednesday', fixedValueConverter.thermostatScheduleDayMultiDPWithDayNumber(5)],
-            [31, 'schedule_thursday', fixedValueConverter.thermostatScheduleDayMultiDPWithDayNumber(4)],
-            [32, 'schedule_friday', fixedValueConverter.thermostatScheduleDayMultiDPWithDayNumber(3)],
-            [33, 'schedule_saturday', fixedValueConverter.thermostatScheduleDayMultiDPWithDayNumber(2)],
-            [34, 'schedule_sunday', fixedValueConverter.thermostatScheduleDayMultiDPWithDayNumber(1)],
+            [26, 'schedule_monday', fixedValueConverter.thermostatScheduleDayMultiDPWithDayNumber(1)],
+            [27, 'schedule_tuesday', fixedValueConverter.thermostatScheduleDayMultiDPWithDayNumber(2)],
+            [28, 'schedule_wednesday', fixedValueConverter.thermostatScheduleDayMultiDPWithDayNumber(3)],
+            [29, 'schedule_thursday', fixedValueConverter.thermostatScheduleDayMultiDPWithDayNumber(4)],
+            [30, 'schedule_friday', fixedValueConverter.thermostatScheduleDayMultiDPWithDayNumber(5)],
+            [31, 'schedule_saturday', fixedValueConverter.thermostatScheduleDayMultiDPWithDayNumber(6)],
+            [32, 'schedule_sunday', fixedValueConverter.thermostatScheduleDayMultiDPWithDayNumber(7)],
             [35, null, tuya.valueConverter.errorOrBatteryLow],
             [36, 'frost_protection', tuya.valueConverter.onOff],
             [39, 'scale_protection', tuya.valueConverter.onOff],
