@@ -1,5 +1,7 @@
 # AVATTO_me167_TZE200_p3dbf6qs
-This is (hopefully) fix for thermostatic valve AVATTO. 
+This is investigation result for issue: https://github.com/Koenkk/zigbee2mqtt/issues/19787
+
+**THIS FIX IS EXPERIMENTAL, NOT FULLY TESTED AND SHOULD BE USED ON YOR OWN RESPONSIBILITY!**
 
 By default device `_TZE200_p3dbf6qs` is recognized by `zigbee-herdsman-converters` as [ME168](https://www.zigbee2mqtt.io/devices/ME168.html) but in fact it is [ME167](https://www.zigbee2mqtt.io/devices/ME167.html)
 
@@ -11,7 +13,7 @@ It look like that this device supports 6 values for schedule definition (not 4) 
 In this fix I copied device definition and schedule related converters from https://github.com/Koenkk/zigbee-herdsman-converters.
 Fix allows to populate and send 6 elements for schedule to device.
 
-**This fix is experimental, not fully tested and should be used on Yor own responsibility.**
+
 
 ## Installation (Zigbee2mqtt Home Asisstant add-on)
 
