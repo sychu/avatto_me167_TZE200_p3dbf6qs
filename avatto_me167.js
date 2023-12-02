@@ -63,10 +63,10 @@ const fixedValueConverter = {
 
 const definition = {
     fingerprint: tuya.fingerprint('TS0601', [
-        '_TZE200_bvu2wnxz', /* model: 'ME167', vendor: 'AVATTO' */
-        '_TZE200_6rdj8dzm', /* model: 'ME167', vendor: 'AVATTO' */
+        //'_TZE200_bvu2wnxz', /* model: 'ME167', vendor: 'AVATTO' */
+        //'_TZE200_6rdj8dzm', /* model: 'ME167', vendor: 'AVATTO' */
         '_TZE200_p3dbf6qs', /* model: 'ME167', vendor: 'AVATTO' */
-        '_TZE200_rxntag7i', /* model: 'ME168', vendor: 'AVATTO' */
+        //'_TZE200_rxntag7i', /* model: 'ME168', vendor: 'AVATTO' */
     ]),
     model: 'TS0601_thermostat_3',
     vendor: 'TuYa',
@@ -74,8 +74,9 @@ const definition = {
     fromZigbee: [tuya.fz.datapoints],
     toZigbee: [tuya.tz.datapoints],
     whiteLabel: [
-        tuya.whitelabel('AVATTO', 'ME167', 'Thermostatic radiator valve', ['_TZE200_bvu2wnxz', '_TZE200_6rdj8dzm', '_TZE200_p3dbf6qs']),
-        tuya.whitelabel('AVATTO', 'ME168', 'Thermostatic radiator valve', ['_TZE200_rxntag7i']),
+        tuya.whitelabel('AVATTO', 'ME167', 'Thermostatic radiator valve', ['_TZE200_p3dbf6qs']),
+        //tuya.whitelabel('AVATTO', 'ME167', 'Thermostatic radiator valve', ['_TZE200_bvu2wnxz', '_TZE200_6rdj8dzm', '_TZE200_p3dbf6qs']),
+        //tuya.whitelabel('AVATTO', 'ME168', 'Thermostatic radiator valve', ['_TZE200_rxntag7i']),
     ],
     onEvent: tuya.onEventSetTime,
     configure: tuya.configureMagicPacket,
