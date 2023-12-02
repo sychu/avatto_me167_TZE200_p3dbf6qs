@@ -17,8 +17,8 @@ Fix allows to populate and send 6 elements for schedule to device.
 
 ## Installation (Zigbee2mqtt Home Asisstant add-on)
 
-1. In your `config/zigbee2mqtt` folder, add `avatto_me167.js`.
+1. In your `config/zigbee2mqtt` folder, add `avatto_me167.js`
 2. Open your zigbee2mqtt addon Web UI, navigate to settings, then external converters
-3. Click the '+' button, and type `avatto_me167` into the text box which appears.
+3. Click the '+' button, and type `avatto_me167.js` into the text box which appears.
 4. Click submit and restart Zigbee2mqtt
 5. Go to device and reconfigure 🔄️ 
